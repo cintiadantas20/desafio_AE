@@ -1,0 +1,14 @@
+desafioae:
+  target: dev
+  outputs:
+    dev:
+      dataset: dbt_cintia
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /mnt/c/Users/carlo/Desktop/Cursos/cientistaDados_Lighthouse/Aulas_jornada_tecnica/Desafio_AE/desafio_AE/desafio-ae-986d58b8de74.json
+      location: US
+      method: service-account
+      priority: interactive
+      project: desafioae
+      threads: 4
+      type: bigquery

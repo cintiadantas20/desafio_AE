@@ -1,0 +1,43 @@
+
+
+============================== 2023-06-14 21:16:36.269647 | fafd52b9-ea58-492a-ae30-e8bbbb0318e1 ==============================
+[0m21:16:36.269647 [info ] [MainThread]: Running with dbt=1.4.6
+[0m21:16:36.271794 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m21:16:36.272673 [debug] [MainThread]: Tracking: tracking
+[0m21:16:36.323383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4cabf40d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4cabf40cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4cabf40c70>]}
+[0m21:16:42.100899 [debug] [MainThread]: Starter project path: /mnt/c/Users/carlo/Desktop/Cursos/cientistaDados_Lighthouse/Aulas_jornada_tecnica/Desafio_AE/desafio_AE/venv/lib/python3.8/site-packages/dbt/include/starter_project
+[0m23:02:39.030700 [info ] [MainThread]: Profile desafioae written to /root/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m23:02:39.088368 [info ] [MainThread]: 
+Your new dbt project "desafioae" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:02:39.117962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4cabf406d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4cabf40610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4cabf40850>]}
+[0m23:02:39.142834 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-06-14 23:04:18.118534 | 6e0fa4c3-4f4b-4c86-b84a-d4d903aac867 ==============================
+[0m23:04:18.118534 [info ] [MainThread]: Running with dbt=1.4.6
+[0m23:04:18.121080 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m23:04:18.122489 [debug] [MainThread]: Tracking: tracking
+[0m23:04:18.185590 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ca9570fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ca9570550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ca9570670>]}
+[0m23:04:27.197365 [debug] [MainThread]: Executing "git --help"
+[0m23:04:27.275982 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:04:27.276978 [debug] [MainThread]: STDERR: "b''"
+[0m23:04:27.312650 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m23:04:27.313678 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:04:27.315134 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: 'C:/Users/carlo/Desktop/Cursos/cientistaDados_Lighthouse/Aulas_jornada_tecnica/Desafio_AE/desafio_AEdesafio-ae-986d58b8de74.json''
+[0m23:04:27.346329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ca7acff40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ca7acfd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ca7acffa0>]}
+[0m23:04:27.352535 [debug] [MainThread]: Flushing usage events
+[0m23:04:28.326181 [debug] [MainThread]: Connection 'debug' was properly closed.
