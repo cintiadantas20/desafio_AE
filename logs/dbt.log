@@ -41,3 +41,58 @@ Happy modeling!
 [0m23:04:27.346329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ca7acff40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ca7acfd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ca7acffa0>]}
 [0m23:04:27.352535 [debug] [MainThread]: Flushing usage events
 [0m23:04:28.326181 [debug] [MainThread]: Connection 'debug' was properly closed.
+
+
+============================== 2023-06-16 20:50:07.734264 | 78d0b5c2-e9d6-4e07-ac7c-dd734903a55e ==============================
+[0m20:50:07.734264 [info ] [MainThread]: Running with dbt=1.4.6
+[0m20:50:07.736424 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/mnt/c/Users/carlo/Desktop/Cursos/cientistaDados_Lighthouse/Aulas_jornada_tecnica/Desafio_AE/desafioaeadw', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m20:50:07.737426 [debug] [MainThread]: Tracking: tracking
+[0m20:50:07.770568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff107032670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff107032310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff107032040>]}
+[0m20:51:03.366075 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff107032460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff107032100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff107032190>]}
+[0m20:51:03.367264 [debug] [MainThread]: Flushing usage events
+[0m20:51:04.304212 [error] [MainThread]: Encountered an error:
+
+[0m20:51:04.333623 [error] [MainThread]: Traceback (most recent call last):
+  File "/mnt/c/Users/carlo/Desktop/Cursos/cientistaDados_Lighthouse/Aulas_jornada_tecnica/Desafio_AE/desafioaeadw/venv/lib/python3.8/site-packages/dbt/main.py", line 136, in main
+    results, succeeded = handle_and_check(args)
+  File "/mnt/c/Users/carlo/Desktop/Cursos/cientistaDados_Lighthouse/Aulas_jornada_tecnica/Desafio_AE/desafioaeadw/venv/lib/python3.8/site-packages/dbt/main.py", line 206, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/mnt/c/Users/carlo/Desktop/Cursos/cientistaDados_Lighthouse/Aulas_jornada_tecnica/Desafio_AE/desafioaeadw/venv/lib/python3.8/site-packages/dbt/main.py", line 253, in run_from_args
+    results = task.run()
+  File "/mnt/c/Users/carlo/Desktop/Cursos/cientistaDados_Lighthouse/Aulas_jornada_tecnica/Desafio_AE/desafioaeadw/venv/lib/python3.8/site-packages/dbt/task/init.py", line 286, in run
+    project_name = self.get_valid_project_name()
+  File "/mnt/c/Users/carlo/Desktop/Cursos/cientistaDados_Lighthouse/Aulas_jornada_tecnica/Desafio_AE/desafioaeadw/venv/lib/python3.8/site-packages/dbt/task/init.py", line 243, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "/mnt/c/Users/carlo/Desktop/Cursos/cientistaDados_Lighthouse/Aulas_jornada_tecnica/Desafio_AE/desafioaeadw/venv/lib/python3.8/site-packages/click/termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "/mnt/c/Users/carlo/Desktop/Cursos/cientistaDados_Lighthouse/Aulas_jornada_tecnica/Desafio_AE/desafioaeadw/venv/lib/python3.8/site-packages/click/termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+
+
+============================== 2023-06-16 20:52:28.245545 | 6dd547f5-7e7d-4982-befc-be93df3573d0 ==============================
+[0m20:52:28.245545 [info ] [MainThread]: Running with dbt=1.4.6
+[0m20:52:28.253817 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/mnt/c/Users/carlo/Desktop/Cursos/cientistaDados_Lighthouse/Aulas_jornada_tecnica/Desafio_AE/desafioaeadw', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m20:52:28.254696 [debug] [MainThread]: Tracking: tracking
+[0m20:52:28.322806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff77630d700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff77630d370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff77630d0a0>]}
+[0m20:52:53.975071 [debug] [MainThread]: Starter project path: /mnt/c/Users/carlo/Desktop/Cursos/cientistaDados_Lighthouse/Aulas_jornada_tecnica/Desafio_AE/desafioaeadw/venv/lib/python3.8/site-packages/dbt/include/starter_project
+[0m20:54:39.606679 [info ] [MainThread]: Profile desafioaeadw written to /mnt/c/Users/carlo/Desktop/Cursos/cientistaDados_Lighthouse/Aulas_jornada_tecnica/Desafio_AE/desafioaeadw/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m20:54:39.614376 [info ] [MainThread]: 
+Your new dbt project "desafioaeadw" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:54:39.623124 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff77630d640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7762ef1f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff7762ef640>]}
+[0m20:54:39.625012 [debug] [MainThread]: Flushing usage events
