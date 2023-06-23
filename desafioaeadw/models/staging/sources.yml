@@ -1,0 +1,45 @@
+version: 2
+
+sources:
+  - name: dbt_cintia
+    tables:
+      - name: address
+        description: 'Tabela de informações de ruas e cidades'
+
+      - name: countryregion
+        description: 'Tabela de informações de países e regiões'
+
+      - name: customer
+        description: 'Tabela de informações dos clientes'
+
+      - name: employee
+        description: 'Tabela de informações de colaboradores'  
+
+      - name: person
+        description: 'Tabela de informações das pessoas envolvidas (colaboradores, clientes e fornecedores)'
+
+      - name: product
+        description: 'Tabelas de informações de produtos vendidos ou usados na produção'
+
+      - name: salesorderdetail
+        description: 'Tabela de informações detalhadas dos pedidos, por produto'
+        columns:
+          - name: salesorderdetailid 
+            tests:
+              - unique
+    
+      - name: salesorderheader
+        description: 'Tabela de informações gerais do pedido'
+        columns:
+          - name: salesorderid
+            tests:
+              - unique
+
+      - name: salesperson
+        description: 'Tabela de informações do colaborador'
+
+      - name: salesreason
+        description: 'Tabela de informações dos motivos da compra'
+
+      - name: stateprovince
+        description: 'Tabela de informações de estados e províncias'
