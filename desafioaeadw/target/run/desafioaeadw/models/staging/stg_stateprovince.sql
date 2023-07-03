@@ -1,13 +1,8 @@
 
-  
-    
 
-    create or replace table `desafioaeadw`.`dbt_cintia_staging`.`stg_stateprovince`
-    
-    
-    OPTIONS()
-    as (
-      with
+  create or replace view `desafioaeadw`.`dbt_cintia_staging`.`stg_stateprovince`
+  OPTIONS()
+  as with
     sources as (
         select 
           stateprovinceid
@@ -22,6 +17,5 @@
     )
 
 select *
-from sources
-    );
-  
+from sources;
+

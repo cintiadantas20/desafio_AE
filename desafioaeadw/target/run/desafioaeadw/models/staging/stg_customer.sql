@@ -1,13 +1,8 @@
 
-  
-    
 
-    create or replace table `desafioaeadw`.`dbt_cintia_staging`.`stg_customer`
-    
-    
-    OPTIONS()
-    as (
-      with
+  create or replace view `desafioaeadw`.`dbt_cintia_staging`.`stg_customer`
+  OPTIONS()
+  as with
     sources as (
         select 
           customerid
@@ -20,6 +15,5 @@
     )
 
 select *
-from sources
-    );
-  
+from sources;
+

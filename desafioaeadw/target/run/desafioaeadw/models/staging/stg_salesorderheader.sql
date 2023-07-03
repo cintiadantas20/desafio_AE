@@ -1,13 +1,8 @@
 
-  
-    
 
-    create or replace table `desafioaeadw`.`dbt_cintia_staging`.`stg_salesorderheader`
-    
-    
-    OPTIONS()
-    as (
-      with
+  create or replace view `desafioaeadw`.`dbt_cintia_staging`.`stg_salesorderheader`
+  OPTIONS()
+  as with
     sources as (
         select 
           salesorderid
@@ -25,7 +20,10 @@
           , billtoaddressid
           , shiptoaddressid
           , shipmethodid
-          , creditcardid
+          , case
+              when creditcardid is null then 'Other'
+              else creditcardid
+              end as creditcardid
           , creditcardapprovalcode
           , currencyrateid
           , subtotal
@@ -39,6 +37,5 @@
     )
 
 select *
-from sources
-    );
-  
+from sources;
+
