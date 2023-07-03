@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_salesorderheaderdetail
+    description: 'Tabela dimensão que relaciona as tabelas fato salesorderheader e salesorderdetail'
+    columns:
+      - name: salesorderid
+        description: 'ID do pedido'
+        tests:
+          - not_null
+      - name: salesorderdetailid
+        description: 'ID do produto de cada pedido'
+        tests:
+          - unique
+          - not_null
