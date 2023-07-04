@@ -17,7 +17,7 @@ with fct_salesorderheader as (
         , billtoaddressid 
         , shiptoaddressid
         , shipmethodid 
-        , creditcardid 
+        , creditcardid
         , subtotal 
         , taxamt
         , freight 

@@ -5,7 +5,7 @@ models:
     description: 'Tabela de informações detalhadas dos pedidos, por produto'
     columns:
       - name: salesorderdetailid
-        description: 'ID único do item por pedido realizado'
+        description: 'PK ID único do item por pedido realizado'
         tests:
           - unique
           - not_null

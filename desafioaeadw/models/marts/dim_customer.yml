@@ -4,8 +4,8 @@ models:
   - name: dim_customer
     description: 'Tabela dimensão de informações dos clientes'
     columns:
-      - name: customer_sk
-        description: 'Surrogate key do ID do cliente'
+      - name: customerid
+        description: 'PK ID do cliente'
         tests:
           - unique
           - not_null

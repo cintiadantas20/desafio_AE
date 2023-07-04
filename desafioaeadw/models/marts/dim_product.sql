@@ -18,7 +18,7 @@ with int_salesorderdetail as (
 
 , dim_product as (
     select 
-        row_number() over (order by int_salesorderdetail.productid) as product_sk
+        productid
         , int_product.productname
         , int_product.standardcost 
         , int_product.listprice 

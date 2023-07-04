@@ -4,8 +4,8 @@ models:
   - name: dim_product
     description: 'Tabela dimensão de produtos vendidos'
     columns:
-      - name: product_sk
-        description: 'Surrogate key do ID do produto'
+      - name: productid
+        description: 'PK ID do produto'
         tests:
           - unique
           - not_null

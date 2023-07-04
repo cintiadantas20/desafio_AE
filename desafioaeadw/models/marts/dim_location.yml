@@ -4,8 +4,8 @@ models:
   - name: dim_location
     description: 'Tabela dimensão de informações de endereços'
     columns:
-      - name: location_sk
-        description: 'Surrogate key do ID do endereço'
+      - name: shiptoaddressid
+        description: 'PK ID do endereço'
         tests:
           - unique
           - not_null

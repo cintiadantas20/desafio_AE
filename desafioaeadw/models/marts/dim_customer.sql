@@ -19,7 +19,7 @@ with stg_salesorderheader as(
 
 , dim_customer as (
     select
-        row_number() over (order by stg_salesorderheader.customerid) as customer_sk
+        customerid
         , int_customer.customerfullname
     from stg_salesorderheader
     left join int_customer on stg_salesorderheader.customerid = int_customer.customerid

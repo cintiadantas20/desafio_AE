@@ -22,7 +22,7 @@ with stg_salesorderheader as(
 
 , dim_location as (
     select
-		row_number() over (order by stg_salesorderheader.shiptoaddressid) as location_sk
+		addressid as shiptoaddressid
 	    , addressline1
 	    , city 
 	    , postalcode 

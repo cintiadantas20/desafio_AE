@@ -5,7 +5,7 @@ models:
     description: 'Tabela dimensão de informações do motivo de venda'
     columns:
       - name: salesorderid
-        description: 'Surrogate key do ID do motivo de venda'
+        description: 'PK ID do motivo de venda'
         tests:
           - unique   
       - name: reasonname

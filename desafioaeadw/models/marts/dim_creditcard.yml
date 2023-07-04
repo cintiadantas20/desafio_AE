@@ -4,8 +4,8 @@ models:
   - name: dim_creditcard
     description: 'Tabela dimensão de informações de cartões de crédito'
     columns:
-      - name: creditcard_sk
-        description: 'Surrogate key do ID do cartão de crédito'
+      - name: creditcardid
+        description: 'PK ID do cartão de crédito'
         tests:
           - unique
           - not_null
