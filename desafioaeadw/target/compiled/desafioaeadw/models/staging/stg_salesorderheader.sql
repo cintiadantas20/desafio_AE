@@ -16,10 +16,7 @@ with
           , billtoaddressid
           , shiptoaddressid
           , shipmethodid
-          , case
-              when creditcardid is null then 'Other'
-              else creditcardid
-              end as creditcardid
+          , creditcardid
           , creditcardapprovalcode
           , currencyrateid
           , subtotal
