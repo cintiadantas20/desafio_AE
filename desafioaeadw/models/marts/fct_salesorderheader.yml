@@ -4,8 +4,33 @@ models:
   - name: fct_salesorderheader
     description: 'Tabela de informações gerais do pedido'
     columns:
+      - name: salesorderheader_sk
+        description: 'SK de cada pedido realizado'
+        tests:
+          - unique
+          - not_null
+      - name: customer_fk
+        description: 'FK da tabela dimensão de cliente'
+        tests:
+          - unique
+          - not_null
+      - name: shiptoaddress_fk
+        description: 'FK da tabela dimensão de endereço'
+        tests:
+          - unique
+          - not_null
+      - name: creditcard_fk
+        description: 'FK da tabela dimensão de cartão de crédito'
+        tests:
+          - unique
+          - not_null
+      - name: salesorder_fk
+        description: 'FK da tabela dimensão que relaciona esta com a outra tabela fato'
+        tests:
+          - unique
+          - not_null
       - name: salesorderid
-        description: 'PK ID única de cada pedido realizado'
+        description: 'ID única de cada pedido realizado'
         tests:
           - unique
           - not_null

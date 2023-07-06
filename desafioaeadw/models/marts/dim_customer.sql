@@ -19,7 +19,11 @@ with stg_salesorderheader as(
 
 , dim_customer as (
     select
-        customerid
+        {{ dbt_utils.generate_surrogate_key (
+            ['stg_salesorderheader.customerid'
+            , 'int_customer.customerid']
+        ) }} as customer_sk
+        , int_customer.customerid
         , int_customer.customerfullname
     from stg_salesorderheader
     left join int_customer on stg_salesorderheader.customerid = int_customer.customerid

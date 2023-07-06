@@ -4,8 +4,23 @@ models:
   - name: fct_salesorderdetail
     description: 'Tabela de informações detalhadas dos pedidos, por produto'
     columns:
+      - name: salesorderdetail_sk
+        description: 'SK do item por pedido realizado'
+        tests:
+          - unique
+          - not_null
+      - name: product_fk
+        description: 'FK da tabela dimensão de produto'
+        tests:
+          - unique
+          - not_null
+      - name: salesorderdetailid_fk
+        description: 'FK da tabela dimensão que relaciona esta fato com a outra'
+        tests:
+          - unique
+          - not_null
       - name: salesorderdetailid
-        description: 'PK ID único do item por pedido realizado'
+        description: 'ID único do item por pedido realizado'
         tests:
           - unique
           - not_null

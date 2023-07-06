@@ -18,7 +18,11 @@ with int_salesorderdetail as (
 
 , dim_product as (
     select 
-        productid
+        {{ dbt_utils.generate_surrogate_key (
+            ['int_salesorderdetail.productid'
+            , 'int_product.productid']
+        ) }} as product_sk
+        , int_product.productid
         , int_product.productname
         , int_product.standardcost 
         , int_product.listprice 

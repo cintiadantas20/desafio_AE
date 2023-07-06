@@ -17,7 +17,11 @@ with stg_salesorderheader as(
 
 , dim_creditcard as (
     select
-        stg_salesorderheader.creditcardid 
+        {{ dbt_utils.generate_surrogate_key (
+            ['stg_salesorderheader.creditcardid'
+            , 'stg_creditcard.creditcardid']
+        ) }} as creditcard_sk
+        , stg_salesorderheader.creditcardid 
         , stg_creditcard.cardtype
         , stg_creditcard.cardnumber
         , stg_creditcard.expmonth

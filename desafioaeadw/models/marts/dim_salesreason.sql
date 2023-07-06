@@ -15,11 +15,15 @@ with stg_salesorderheader as(
 
 , dim_salesreason as (
     select
-        int_salesreason.salesorderid
+        {{ dbt_utils.generate_surrogate_key (
+            ['stg_salesorderheader.salesorderid'
+            , 'int_salesreason.salesorderid']
+        ) }} as reason_sk       
+        , int_salesreason.salesorderid
         , string_agg(int_salesreason.reasonname, ', ') as reasonname
     from stg_salesorderheader
     left join int_salesreason on stg_salesorderheader.salesorderid = int_salesreason.salesorderid
-    group by int_salesreason.salesorderid
+    group by int_salesreason.salesorderid, stg_salesorderheader.salesorderid
 )
 
 select *

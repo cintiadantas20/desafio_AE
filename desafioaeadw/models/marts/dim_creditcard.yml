@@ -4,6 +4,11 @@ models:
   - name: dim_creditcard
     description: 'Tabela dimensão de informações de cartões de crédito'
     columns:
+      - name: creditcard_sk
+        description: 'SK da tabela dimensão de cartão de crédito'
+        tests:
+          - unique
+          - not_null
       - name: creditcardid
         description: 'PK ID do cartão de crédito'
         tests:

@@ -22,12 +22,16 @@ with stg_salesorderheader as(
 
 , dim_location as (
     select
-		addressid as shiptoaddressid
-	    , addressline1
-	    , city 
-	    , postalcode 
-	    , statename
-	    , countryname
+        {{ dbt_utils.generate_surrogate_key (
+            ['stg_salesorderheader.shiptoaddressid'
+            , 'int_location.addressid']
+        ) }} as shiptoaddress_sk
+		, addressid as shiptoaddressid
+	    , int_location.addressline1
+	    , int_location.city 
+	    , int_location.postalcode 
+	    , int_location.statename
+	    , int_location.countryname
     from stg_salesorderheader
     left join int_location on stg_salesorderheader.shiptoaddressid = int_location.addressid
 )
