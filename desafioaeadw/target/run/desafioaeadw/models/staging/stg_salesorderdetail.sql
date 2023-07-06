@@ -1,8 +1,13 @@
 
+  
+    
 
-  create or replace view `desafioaeadw`.`dbt_cintia_staging`.`stg_salesorderdetail`
-  OPTIONS()
-  as with
+    create or replace table `desafioaeadw`.`dbt_cintia_staging`.`stg_salesorderdetail`
+    
+    
+    OPTIONS()
+    as (
+      with
     sources as (
         select 
           salesorderid
@@ -19,5 +24,6 @@
     )
 
 select *
-from sources;
-
+from sources
+    );
+  
