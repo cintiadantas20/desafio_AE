@@ -12,22 +12,16 @@ models:
       - name: customer_fk
         description: 'FK da tabela dimensão de cliente'
         tests:
-          - unique
           - not_null
       - name: shiptoaddress_fk
         description: 'FK da tabela dimensão de endereço'
         tests:
-          - unique
           - not_null
       - name: creditcard_fk
         description: 'FK da tabela dimensão de cartão de crédito'
-        tests:
-          - unique
-          - not_null
       - name: salesorder_fk
         description: 'FK da tabela dimensão que relaciona esta com a outra tabela fato'
         tests:
-          - unique
           - not_null
       - name: salesorderid
         description: 'ID única de cada pedido realizado'

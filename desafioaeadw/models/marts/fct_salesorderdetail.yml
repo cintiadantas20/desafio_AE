@@ -12,12 +12,10 @@ models:
       - name: product_fk
         description: 'FK da tabela dimensão de produto'
         tests:
-          - unique
           - not_null
-      - name: salesorderdetailid_fk
+      - name: salesorderdetail_fk
         description: 'FK da tabela dimensão que relaciona esta fato com a outra'
         tests:
-          - unique
           - not_null
       - name: salesorderdetailid
         description: 'ID único do item por pedido realizado'

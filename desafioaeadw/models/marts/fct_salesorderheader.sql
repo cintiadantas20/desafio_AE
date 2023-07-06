@@ -21,8 +21,11 @@ with dim_customer as (
 
 
 , dim_salesorderheaderdetail as (
-    select *
+    select 
+        salesorderid
+        , count(distinct salesorderdetailid) as items
     from {{ ref('dim_salesorderheaderdetail')}}
+    group by salesorderid
 )
 
 , stg_salesorderheader as (
@@ -55,8 +58,7 @@ with dim_customer as (
 , fct_salesorderheader as (
     select 
         {{ dbt_utils.generate_surrogate_key (
-            ['dim_salesorderheaderdetail.salesorderid'
-            , 'stg_salesorderheader.salesorderid']
+            ['stg_salesorderheader.salesorderid']
         ) }} as salesorderheader_sk 
         , dim_customer.customerid as customer_fk
         , dim_location.shiptoaddressid as shiptoaddress_fk
