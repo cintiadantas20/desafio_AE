@@ -66,20 +66,6 @@ Para testar, o procedimento é o mesmo:
 
 `dbt test --select <nome da tabela>` roda os testes com a tabela específica
 
-## Acesso dos dados com o dbt
-
-Salve as tabelas da pasta seeds desse repositório na pasta seeds criada pelo dbt na sua máquina e use o comando `dbt seeds` para popular o Big Query com essas tabelas.
-
-O dbt trabalha com 3 camadas para transformação dos dados: staging, intermediate e marts, com a criação de arquivos .sql e .yml. No primeiro, você deverá escrever as consultas para elaboração das tabelas. No segundo, ficam os testes das colunas e documentação.
-
-Você poderá rodar o dbt por inteiro com `dbt run` ou por tabelas, com `dbt run --select <nome da tabela>`. Para atualizar, pode usar o comando `--full-refresh` na frente
-
-Para testar, o procedimento é o mesmo:
-
-`dbt test –select source:*` roda os testes do arquivo sources.yml
-
-`dbt test --select <nome da tabela>` roda os testes com a tabela específica
-
 ## Agora é com você!
 
 Sua máquina está pronta para a construção do projeto!
